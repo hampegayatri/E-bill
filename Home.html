@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home - E-Bill Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('assets/image2.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: #6a1b9a;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .card-header {
+            background-color: #6a1b9a;
+            color: white;
+        }
+
+        .footer {
+            background-color: #6a1b9a;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">E-Bill Application</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="payment.html">Pay Bills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="History.html">View History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="NewConnection.html">Apply for New Connections</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedbackcomplaint.html">Feedback and Complaint</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="alerts.html">Alerts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-dark bg-light rounded-pill text-center ">Welcome to E-Bill Application</h1>
+            </div>
+        </div>
+        <!-- Personal Information and User Actions -->
+        <div class="row mt-4">
+            <!-- Personal Information -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header fs-4">
+                        Profile Information
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Full Name:</strong> Gayatri Hampe</p>
+                        <p><strong>Email:</strong> gayatrihampe@gmail.com</p>
+                        <p><strong>Phone Number:</strong> 9988776655</p>
+                        <p><strong>Address:</strong> 123 Main St, City, Country</p>
+                        <p><strong>Account Number:</strong> 123456789</p>
+                        <p><strong>Account Balance:</strong> 15000.00</p>
+                        <p><strong>Last Login:</strong> June 8, 2024</p>
+                    </div>
+                </div>
+            </div>
+            <!-- User Actions -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header fs-4">
+                        User Actions
+                    </div>
+                    <div class="card-body">
+                        <p>Choose an action to proceed:</p>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="update_profile.html">Update Profile</a></li>
+                            <li class="list-group-item"><a href="view_invoices.html">View Invoices</a></li>
+                            <li class="list-group-item"><a href="settings.html">Settings</a></li>
+                            <li class="list-group-item"><a href="support.html">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="row justify-content-end">
+            <div class="col-md-6">
+        <div class="mt-4">
+            <h2 class="text-white fs-1 mt-5">Why Choose Us?</h2>
+            <ul class="text-white fs-3 mt-4 mb-5">
+                <li>Comprehensive bill management</li>
+                <li>Environmentally friendly paperless billing</li>
+                <li>Real-time updates on bill payments and dues</li>
+                <li>Secure and encrypted transactions</li>
+                <li>Personalized customer service</li>
+                <li>Integration with multiple payment methods</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </div>
+        
+    </div>
+   
+        <footer class="fixed-bottom text-center footer">
+            <p>&copy; 2024 E-Bill Application. All rights reserved.</p>
+        </footer>
+</body>
+
+</html>

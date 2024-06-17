@@ -9,9 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url('assets/image2.jpg');
+            background: linear-gradient(135deg, #f0e6f4, #d0bddd, #a888c6);
             background-size: cover;
-            background-attachment: fixed;
         }
 
         .navbar {
@@ -32,13 +31,18 @@
         .container {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            border-radius: 10px;
-            margin-top: 50px;
+            border-radius: 30px;
+            margin-top: 100px;
+            margin-bottom: 100px;
         }
-        .btn{
+
+        .btn {
             background-color: #6a1b9a;
             color: aliceblue;
+            border-radius: 40px;
+
         }
+
         .btn:hover {
             background-color: #732d91;
             border-color: #732d91;
@@ -50,13 +54,16 @@
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">E-Bill Application</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand fs-4" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor"
+                        class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    <b>E-Bill Application</b>
+                </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
@@ -91,18 +98,20 @@
         <h1 class="text-center mt-4">Check History - E-Bill Application</h1>
         <!-- Advanced Search Form -->
         <form id="advanced-search-form" class="mt-4">
-            <div class="mb-3">
-                <label for="search" class="form-label">Search by Bill Number:</label>
-                <input type="text" class="form-control" id="search" name="search">
-            </div>
-            <div class="mb-3">
-                <label for="filter" class="form-label">Filter by:</label>
-                <select id="filter" name="filter" class="form-select">
-                    <option value="date">Date</option>
-                    <option value="status">Status</option>
-                    <option value="paymentMethod">Payment Method</option>
-                    <option value="meterReading">Meter Reading</option>
-                </select>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="search" class="form-label">Search by Bill Number:</label>
+                    <input type="text" class="form-control" id="search" name="search">
+                </div>
+                <div class="col-md-6">
+                    <label for="filter" class="form-label">Filter by:</label>
+                    <select id="filter" name="filter" class="form-select">
+                        <option value="date">Date</option>
+                        <option value="status">Status</option>
+                        <option value="paymentMethod">Payment Method</option>
+                        <option value="meterReading">Meter Reading</option>
+                    </select>
+                </div>
             </div>
             <button type="submit" class="btn">Search</button>
             <button type="reset" class="btn">Reset</button>
@@ -162,7 +171,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer text-center mt-4">
+    <footer class="footer text-center mt-4 fixed-bottom">
         <p>&copy; 2024 E-Bill Application. All rights reserved.</p>
     </footer>
 

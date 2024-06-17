@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url('assets/image2.jpg');
+            background: linear-gradient(135deg, #f0e6f4, #d0bddd, #a888c6);
             background-size: cover;
             background-attachment: fixed;
         }
@@ -21,6 +21,12 @@
         .navbar-brand,
         .navbar-nav .nav-link {
             color: white !important;
+        }
+
+        .card {
+
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 40px;
         }
 
         .card-header {
@@ -38,13 +44,16 @@
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">E-Bill Application</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand fs-4" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor"
+                        class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    <b>E-Bill Application</b>
+                </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
@@ -75,73 +84,51 @@
     </header>
 
     <!-- Main Container -->
-    <div class="container mt-5">
+    <div class="container mt-5 p-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h1 class="text-dark bg-light rounded-pill text-center ">Welcome to E-Bill Application</h1>
             </div>
         </div>
-        <!-- Personal Information and User Actions -->
+        <!-- Personal Information and Why Choose Us -->
         <div class="row mt-4">
             <!-- Personal Information -->
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="card">
-                    <div class="card-header fs-4">
+                    <div class="card-header fs-4 text-center">
                         Profile Information
                     </div>
-                    <div class="card-body">
-                        <p><strong>Full Name:</strong> Gayatri Hampe</p>
-                        <p><strong>Email:</strong> gayatrihampe@gmail.com</p>
-                        <p><strong>Phone Number:</strong> 9988776655</p>
-                        <p><strong>Address:</strong> 123 Main St, City, Country</p>
-                        <p><strong>Account Number:</strong> 123456789</p>
-                        <p><strong>Account Balance:</strong> 15000.00</p>
-                        <p><strong>Last Login:</strong> June 8, 2024</p>
+                    <div class="card-body" id="profileInfo">
+                        <p><strong>Name:</strong> <span id="user-name"></span></p>
+                        <p><strong>Email:</strong> <span id="user-email"></span></p>
+                        <p><strong>Phone:</strong> <span id="user-phone"></span></p>
+                        <p><strong>Address:</strong> <span id="user-address"></span></p>
                     </div>
                 </div>
             </div>
-            <!-- User Actions -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header fs-4">
-                        User Actions
-                    </div>
-                    <div class="card-body">
-                        <p>Choose an action to proceed:</p>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="update_profile.html">Update Profile</a></li>
-                            <li class="list-group-item"><a href="view_invoices.html">View Invoices</a></li>
-                            <li class="list-group-item"><a href="settings.html">Settings</a></li>
-                            <li class="list-group-item"><a href="support.html">Support</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Why Choose Us -->
-        <div class="row justify-content-end">
+            <!-- Why Choose Us -->
             <div class="col-md-6">
-        <div class="mt-4">
-            <h2 class="text-white fs-1 mt-5">Why Choose Us?</h2>
-            <ul class="text-white fs-3 mt-4 mb-5">
-                <li>Comprehensive bill management</li>
-                <li>Environmentally friendly paperless billing</li>
-                <li>Real-time updates on bill payments and dues</li>
-                <li>Secure and encrypted transactions</li>
-                <li>Personalized customer service</li>
-                <li>Integration with multiple payment methods</li>
-            </ul>
+                <div class="mt-4">
+                    <h2 class="text-dark fs-1 ">Why Choose Us?</h2>
+                    <ul class="text-dark fs-3 ">
+                        <li>Comprehensive bill management</li>
+                        <li>Environmentally friendly paperless billing</li>
+                        <li>Real-time updates on bill payments and dues</li>
+                        <li>Secure and encrypted transactions</li>
+                        <li>Personalized customer service</li>
+                        <li>Integration with multiple payment methods</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-    </div>
-        
-    </div>
-   
-        <footer class="fixed-bottom text-center footer">
-            <p>&copy; 2024 E-Bill Application. All rights reserved.</p>
-        </footer>
+
+    <footer class="fixed-bottom text-center footer fixed-bottom">
+        <p>&copy; 2024 E-Bill Application. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="home.js"></script>
 </body>
 
 </html>
